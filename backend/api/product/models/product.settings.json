@@ -38,8 +38,20 @@
       "required": true
     },
     "farm": {
-      "via": "products",
-      "model": "farm"
+      "model": "farm",
+      "via": "products"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "fruit",
+        "vegetable",
+        "dried_product",
+        "juice",
+        "other"
+      ],
+      "required": true,
+      "default": "other"
     }
   }
 }
