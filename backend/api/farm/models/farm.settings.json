@@ -31,6 +31,10 @@
     "products": {
       "via": "farm",
       "collection": "product"
+    },
+    "orders": {
+      "via": "farm",
+      "collection": "order"
     }
   }
 }
