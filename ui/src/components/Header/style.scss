@@ -1,7 +1,8 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
+@import "../../styles/colours.scss";
 
 .header {
-    background: lime;
-    text-align: center;
-    height:$header_height;
+  background: $header;
+  text-align: center;
+  height: $header_height;
 }
