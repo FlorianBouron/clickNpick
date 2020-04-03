@@ -29,8 +29,8 @@
       "required": true
     },
     "products": {
-      "collection": "product",
-      "via": "farm"
+      "via": "farm",
+      "collection": "product"
     }
   }
 }
