@@ -1,0 +1,48 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "strict": 0,
+      "react/prop-types": 0,
+      "import/prefer-default-export": 0,
+      "jsx-a11y/accessible-emoji": 0,
+      "no-return-assign": 0,
+      "no-mixed-operators": 0,
+      "react/forbid-prop-types": 0,
+      "react/no-render-return-value": 0,
+      "linebreak-style": 0,
+      "jsx-a11y/label-has-for": 0,
+      "react/style-prop-object": 0,
+      "no-delete-var": 0,
+      "import/no-named-as-default": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "overrides": [
+      {
+        "files": ["*-test.js", "*.spec.js"],
+        "rules": {
+          "no-unused-expressions": "off"
+        }
+      }
+    ],
+    "globals": {
+      "document": true,
+      "window": true,
+      "navigator": true,
+      "describe": true,
+      "it": true,
+      "expect": true,
+      "test": true,
+      "jest": true,
+      "beforeEach": true,
+      "debug": true,
+      "beforeAll": true,
+      "afterEach":true
+    },
+    "parser": "babel-eslint"
+  }
+  
