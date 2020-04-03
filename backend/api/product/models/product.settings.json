@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "quantity_available": {
+      "required": true,
+      "type": "integer"
+    },
+    "unit": {
+      "type": "string",
+      "required": true
+    },
+    "farm": {
+      "via": "products",
+      "model": "farm"
+    }
+  }
+}

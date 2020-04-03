@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "farms",
+  "info": {
+    "name": "Farm"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "coordinates": {
+      "type": "json",
+      "required": true
+    },
+    "products": {
+      "collection": "product",
+      "via": "farm"
+    }
+  }
+}
