@@ -1,12 +1,18 @@
 import React from 'react';
+
+// styles
 import './App.css';
+
+// components
+import Routing from './Routing';
+import PageWrapper from './components/PageWrapper';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Click and Pick</h1>
-      </header>
+      <PageWrapper>
+        <Routing />
+      </PageWrapper>
     </div>
   );
 }
