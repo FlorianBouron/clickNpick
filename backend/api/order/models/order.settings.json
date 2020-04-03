@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "pickup_date": {
+      "required": true,
+      "type": "datetime"
+    },
+    "order_date": {
+      "required": true,
+      "type": "datetime"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "canceled",
+        "paid",
+        "delivered"
+      ]
+    },
+    "code_locker": {
+      "type": "string",
+      "private": true
+    },
+    "products": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
