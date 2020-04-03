@@ -6,12 +6,16 @@ import './App.css';
 // components
 import Routing from './Routing';
 import PageWrapper from './components/PageWrapper';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
       <PageWrapper>
+        <Header />
         <Routing />
+        <Footer />
       </PageWrapper>
     </div>
   );
