@@ -42,6 +42,10 @@
     "products": {
       "type": "json",
       "required": true
+    },
+    "farm": {
+      "model": "farm",
+      "via": "orders"
     }
   }
 }
