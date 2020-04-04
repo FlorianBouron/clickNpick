@@ -3,13 +3,14 @@ import { Switch, Route } from 'react-router-dom';
 
 // constants
 import {
-  ROOT, PRODUCT, FARMERS_LIST,
+  ROOT, PRODUCT_PAGE, FARMERS_LIST, PRODUCT_LIST,
 } from '../constants/routerConstants';
 
 // pages
 import LandingPage from '../Routes/LandingPage';
 import FarmersListPage from '../Routes/FarmersListPage';
 import ProductPage from '../Routes/ProductPage';
+import ProductListPage from '../Routes/ProductListPage';
 
 // components
 import { CartContextProvider } from '../contexts/CartContext/CartContext';
@@ -24,7 +25,10 @@ function Router() {
         <Route exact path={FARMERS_LIST}>
           <FarmersListPage />
         </Route>
-        <Route exact path={PRODUCT}>
+        <Route exact path={PRODUCT_LIST}>
+          <ProductListPage />
+        </Route>
+        <Route exact path={PRODUCT_PAGE}>
           <ProductPage />
         </Route>
       </Switch>

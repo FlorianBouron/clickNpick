@@ -53,8 +53,7 @@ export default withRouter(({ history }) => {
   return (
     <Section className="address-search-section">
       <Typography variant="body1" component="body1" className="MB-3">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text.
+        Click & Farm connects you to the nearest farmer of your location, and order your grocery online.
       </Typography>
       <input
         type="search"

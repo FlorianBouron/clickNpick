@@ -12,7 +12,7 @@ import './style.scss';
 
 // constants
 import { API_URL } from '../../constants/apiConstants';
-import { PRODUCT } from '../../constants/routerConstants';
+import { PRODUCT_LIST } from '../../constants/routerConstants';
 
 function FarmerCard({
   id,
@@ -72,7 +72,7 @@ function FarmerCard({
             variant="contained"
             color="primary"
             className="farmer-card__footer--shop-button"
-            onClick={() => history.push(PRODUCT)}
+            onClick={() => history.push(PRODUCT_LIST)}
           >
             Buy from this farmer
           </Button>
