@@ -39,7 +39,7 @@ function ProductListPage() {
         className="product-list-page__input"
       />
       {productList.map((product) => (
-        <ProductListPageCard key={`product-${product.id}`} />
+        <ProductListPageCard key={`product-${product.id}`} product={product} />
       ))}
     </Section>
   );
