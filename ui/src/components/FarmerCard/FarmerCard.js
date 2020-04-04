@@ -37,7 +37,7 @@ function FarmerCard({
               variant="square"
               className="farmer-card__avatar"
             />
-            <Typography variant="body2" component="body2" className="farmer-card__description">
+            <Typography variant="body2" component="div" className="farmer-card__description">
               {description}
             </Typography>
             <Button className="farmer-card__footer--map-button">

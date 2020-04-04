@@ -13,14 +13,14 @@ import Section from '../../components/Section';
 import './style.scss';
 
 export default function FarmersListPage() {
-  const [productsList, setProductsList] = useState([]);
+  const [farmersList, setFarmersList] = useState([]);
 
   useEffect(() => {
     window
       .fetch(`${API_URL}${FARMERS_ENDPOINT}`)
       .then((response) => response.json())
       .then((res) => {
-        setProductsList(res);
+        setFarmersList(res);
       })
       .catch((err) => {
         console.log(err);
@@ -37,12 +37,12 @@ export default function FarmersListPage() {
       <Typography variant="h3" component="h3" className="farmers-list__header">
         {'Farmers in the\narea of Krakow'}
       </Typography>
-      {productsList.map(
+      {farmersList.map(
         ({
           id, name, description, coordinates, picture, products,
         }) => (
           <FarmerCard
-            key={id}
+            key={`farmer-${id}`}
             id={id}
             name={name}
             description={description}
