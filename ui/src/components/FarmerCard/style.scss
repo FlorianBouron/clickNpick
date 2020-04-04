@@ -1,47 +1,90 @@
-@import "../../styles/variables.scss";
+@import "../../styles/all.scss";
 
 $first_column_width: (100%/2);
 $second_column_width: (100%/2);
 
 .farmer-card {
   margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
-  background: lightblue;
+  background: $white;
   flex-wrap: wrap;
+  > .MuiPaper-root {
+    padding: 10px;
+  }
+
+  .farmer-card__header {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
   .farmer-card__row1 {
+    display: flex;
+
     .farmer-card__column1 {
-      background-color: lightcoral;
+      width: 100%;
       width: $first_column_width;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      .farmer-card__avatar {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .farmer-card__description {
+        font-family: serif;
+        font-style: italic;
+      }
+
+      .farmer-card__footer--map-button {
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        svg {
+          font-size: 40px;
+        }
+      }
     }
+
     .farmer-card__column2 {
       width: $second_column_width;
-      background-color: lightcyan;
+
       .farmer-card__images {
-        display: flex;
-        flex-wrap: wrap;
-        .farmer-card__image {
+        .slick-next {
+          right: 50%;
+          top: 98%;
+          transform: translate(50%, 50%) rotate(90deg);
+        }
+        .slick-prev {
+          transform: translate(-50%, 50%) rotate(90deg);
+          left: 50%;
+          top: -17%;
+          z-index: 10;
+        }
+        .farmer-card__image-wrapper {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 50px;
-          width: $first_column_width;
+          height: 110px;
+          width: 100%;
+          .farmer-card__image-avatar {
+            width: 110px;
+            height: 110px;
+          }
         }
       }
     }
   }
+
   .farmer-card__footer {
     display: flex;
     flex-direction: column;
-    .farmer-card__footer--map-button {
-      width: $first_column_width;
-      svg {
-        font-size: 40px;
-      }
-    }
+
     .farmer-card__footer--shop-button {
+      background-color: $CTA;
     }
   }
 }
