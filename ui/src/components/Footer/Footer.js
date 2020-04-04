@@ -6,7 +6,7 @@ import './style.scss';
 export default function Footer() {
   return (
     <div className="footer">
-      Footer
+      Dream team Inc., ©2020
     </div>
   );
 }

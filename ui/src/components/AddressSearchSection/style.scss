@@ -1,0 +1,27 @@
+@import "../../styles/all.scss";
+
+.address-search-section {
+  background-color: $CTA3;
+  text-align: left;
+
+  .address-search-section__button {
+    margin-top:30px;
+    background-color: $CTA;
+    color: $white;
+    font-weight: bold;
+  }
+
+  .address-search-section__error {
+    color: $CTA2;
+    width: 100%;
+    text-align: center;
+  }
+
+  #address-input:invalid {
+      border-color:$CTA2;
+      color:$CTA2;
+      &::placeholder {
+        color: $CTA2;
+      }
+  }
+}
