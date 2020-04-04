@@ -5,5 +5,5 @@ export const LOGIN = '/login';
 export const ORDER = '/order';
 export const PRODUCT_LIST = '/product-list';
 export const FARMERS_LIST = '/farmers-list';
-export const PRODUCT = '/product';
+export const PRODUCT_PAGE = '/product';
 export const VALIDATION = '/validation';

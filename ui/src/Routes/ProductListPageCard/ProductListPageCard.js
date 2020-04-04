@@ -1,14 +1,16 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 
-
 // styles
 import './style.scss';
+import { PRODUCT_PAGE } from '../../constants/routerConstants';
 
-function ProductListPageCard() {
+function ProductListPageCard({ history }) {
   return (
     <Card className="product-list-page-card">
       <img
@@ -24,10 +26,10 @@ function ProductListPageCard() {
       </Typography>
       <div className="product-list-page-card__footer">
         <TextField label="Quantity" className="product-list-page-card__quantity" />
-        <Button>Add</Button>
+        <Button onClick={() => history.push(PRODUCT_PAGE)}>Add</Button>
       </div>
     </Card>
   );
 }
 
-export default ProductListPageCard;
+export default withRouter(ProductListPageCard);

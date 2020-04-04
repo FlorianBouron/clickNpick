@@ -3,7 +3,6 @@ import TextField from '@material-ui/core/TextField';
 import Section from '../../components/Section';
 import ProductListPageCard from '../ProductListPageCard';
 
-
 // styles
 import './style.scss';
 
@@ -15,9 +14,11 @@ function ProductListPage() {
         placeholder="Search for product"
         className="product-list-page__input"
       />
-      {[1, 2, 3].map(() => <ProductListPageCard />)}
+      {[1, 2, 3].map((e) => (
+        <ProductListPageCard key={e} />
+      ))}
     </Section>
   );
 }
 
-export default (ProductListPage);
+export default ProductListPage;

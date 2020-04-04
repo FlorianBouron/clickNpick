@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 // constants
 import {
-  ROOT, PRODUCT, FARMERS_LIST, PRODUCT_LIST,
+  ROOT, PRODUCT_PAGE, FARMERS_LIST, PRODUCT_LIST,
 } from '../constants/routerConstants';
 
 // pages
@@ -28,7 +28,7 @@ function Router() {
         <Route exact path={PRODUCT_LIST}>
           <ProductListPage />
         </Route>
-        <Route exact path={PRODUCT}>
+        <Route exact path={PRODUCT_PAGE}>
           <ProductPage />
         </Route>
       </Switch>
