@@ -39,7 +39,6 @@ Go tho the backend folder and run `npm install`.
 Then run `npm run build`.
 
 You can now start the backend by typing `npm run start`.
-Y
 
 You can access to the admin panel by opening: [http://localhost:1337/admin/](http://localhost:1337/admin/)
 
