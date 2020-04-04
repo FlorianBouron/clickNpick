@@ -22,6 +22,7 @@ const places = require('places.js');
 export default withRouter(({ history }) => {
   const inputEl = useRef(null);
   const [latLng, setLatLng] = useState(null);
+  const [city, setCity] = useState(null);
   const [inputError, setInputError] = useState(false);
 
   useEffect(() => {
@@ -35,8 +36,9 @@ export default withRouter(({ history }) => {
 
     placesAutocomplete.on('change', (e) => {
       const {
-        suggestion: { latlng },
+        suggestion: { latlng, name },
       } = e;
+      setCity(name);
       setLatLng(latlng);
     });
   }, []);
@@ -44,7 +46,7 @@ export default withRouter(({ history }) => {
   function handleClick() {
     if (latLng) {
       setInputError(false);
-      history.push(FARMERS_LIST);
+      history.push(`${FARMERS_LIST}?city=${city}`);
     } else {
       setInputError(true);
     }
