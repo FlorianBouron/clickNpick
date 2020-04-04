@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+// components
 import TextField from '@material-ui/core/TextField';
 import Section from '../../components/Section';
 import ProductListPageCard from '../ProductListPageCard';
+
+// constants
+import { API_URL, PRODUCT_ENDPOINT } from '../../constants/apiConstants';
 
 // styles
 import './style.scss';
 
 function ProductListPage() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const farmerId = urlParams.get('farmer');
+
+  const [productList, setProductList] = useState([]);
+
+
+  useEffect(() => {
+    window
+      .fetch(`${API_URL}${PRODUCT_ENDPOINT}?farm.id=${farmerId}`)
+      .then((response) => response.json())
+      .then((res) => {
+        setProductList(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+
   return (
     <Section className="product-list-page">
       <TextField
@@ -14,8 +38,8 @@ function ProductListPage() {
         placeholder="Search for product"
         className="product-list-page__input"
       />
-      {[1, 2, 3].map((e) => (
-        <ProductListPageCard key={e} />
+      {productList.map((product) => (
+        <ProductListPageCard key={`product-${product.id}`} product={product} />
       ))}
     </Section>
   );
