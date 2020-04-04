@@ -16,18 +16,15 @@ import lockers from '../../assets/images/lockers.png';
 
 const texts = [
   {
-    text:
-      'We installed automatic lockers at each of our farms. When your order is ready you’ll receive the password to pick up your package within 24h. A secured way to avoid contact during the COVID19 pandemi, because we care about the wellbeing of our clients.',
+    text: "We have lockers on all the farms we cooperate with. You'll get a notification after placing an order & have 24h to pick it up. It is the highest safety standard, especially in difficult times like now during COVID-19 outburst.",
     src: lockers,
   },
   {
-    text:
-      'Click & Farm brings an online sales channel to every farmers, decreasing the dependency of public market, supermarkets and exportation. Thanks to your order, you’re helping your local community.',
+    text: 'The Click & Farm idea helps local farmers grow along with their customers by decreasing dependency on markets. Supporting our idea means getting the most healthy food possible, without unnecessary mediators.',
     src: vegetables,
   },
   {
-    text:
-      'Why eating food produced hundreds kilometers away when you can have quality products close to you? Be smart, shop online, choose local!',
+    text: "Polish farmers are expected to be the main source of Europe's food supply soon. By helping them you help your country become more rich every day.Polish farmers are expected to be the main source of Europe's food supply soon. By helping them you help your country become more rich every day.",
     src: basket,
   },
 ];

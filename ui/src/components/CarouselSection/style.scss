@@ -2,9 +2,10 @@
 
 .carousel-section {
   display: block;
-  .carousel-section__header {
+  .carousel-section__header,.carousel-section__text {
     color: $text;
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: bold;
   }
   .carousel-section__image {
     height: auto;

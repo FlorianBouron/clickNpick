@@ -1,8 +1,13 @@
 @import "../../styles/all.scss";
 
 .address-search-section {
-  background-color: $upper_green;
-  text-align: left;
+  text-align: center;
+  color: $text; 
+
+  .address-search-section__header {
+    white-space: pre;
+    font-weight: bold;
+  }
 
   .address-search-section__button {
     margin-top:30px;

@@ -54,14 +54,14 @@ export default withRouter(({ history }) => {
 
   return (
     <Section className="address-search-section">
-      <Typography variant="body1" component="body1" className="MB-3">
-        Click & Farm connects you to the nearest farmer of your location, and order your grocery online.
+      <Typography variant="h6" component="h6" className="address-search-section__header MB-3">
+        {'Put your address in a box below\nto look for some fresh and\ndelicious food in your area.'}
       </Typography>
       <input
         type="search"
         ref={inputEl}
         id="address-input"
-        placeholder="Type your address"
+        placeholder="Type your address here"
         className="email-address-section__input"
         required={inputError}
       />

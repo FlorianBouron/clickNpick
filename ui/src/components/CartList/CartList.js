@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import Typography from '@material-ui/core/Typography';
 import ClearIcon from '@material-ui/icons/Clear';
 // style
@@ -8,8 +8,41 @@ import './style.scss';
 import { Button } from '@material-ui/core';
 import Section from '../Section';
 
+// context
+import CartContext from '../../contexts/CartContext';
+import { API_URL } from '../../constants/apiConstants';
+import { ORDERS } from '../../constants/routerConstants';
+
 export default function CartList() {
   const products = [1, 2, 3, 4, 5, 6];
+
+  const [productData, setProductData] = useState({});
+  const [numberOfProduct, setNumberOfProduct] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
+
+  useEffect(() => {
+    window
+      .fetch(`${API_URL}${ORDERS}`)
+      .then((response) => response.json())
+      .then((res) => {
+        console.log(res);
+        setProductData(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const handleAddProductToCart = () => {
+    setNumberOfProduct(numberOfProduct);
+    addToCart(productData);
+  };
+
+  const {
+    name, price, photo, description, unit,
+  } = productData;
+
   return (
     <Section className="cart-list">
       <div className="cart-list__row cart-list__header">
