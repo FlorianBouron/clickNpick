@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from 'react';
 
 // components
 import Typography from '@material-ui/core/Typography';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import Section from '../../components/Section';
 
@@ -35,6 +37,8 @@ const dataArray = [
   },
 ];
 
+const selectOptions = [1, 2, 3, 4, 5, 10];
+
 export default function ProductPage() {
   const [productData, setProductData] = useState({});
   const [numberOfProduct, setNumberOfProduct] = useState(0);
@@ -54,8 +58,7 @@ export default function ProductPage() {
   }, []);
 
   const handleAddProductToCart = () => {
-    const quantity = numberOfProduct;
-    console.log(quantity);
+    setNumberOfProduct(numberOfProduct);
     addToCart(productData);
   };
 
@@ -92,7 +95,27 @@ export default function ProductPage() {
             </Typography>
             <div className="product-page__counter">
               <div className="product-page__buttons">
-                <Button
+                <Select
+                  className="product-page__select"
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={numberOfProduct || 'empty'}
+                  placeholder="Quantity"
+                  onChange={({ target: { value } }) => setNumberOfProduct(value)}
+                  fullWidth
+                >
+                  <MenuItem disabled value="empty">
+                    <em>Select quantity</em>
+                  </MenuItem>
+                  {selectOptions.map((option) => (
+                    <MenuItem value={option}>
+                      {option}
+                      {' '}
+                      kg
+                    </MenuItem>
+                  ))}
+                </Select>
+                {/* <Button
                   variant="contained"
                   onClick={() => {
                     if (numberOfProduct > 0) {
@@ -110,7 +133,7 @@ export default function ProductPage() {
                   onClick={() => setNumberOfProduct(numberOfProduct + 1)}
                 >
                   +
-                </Button>
+                </Button> */}
               </div>
 
               <Button
