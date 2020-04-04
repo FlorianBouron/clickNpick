@@ -1,0 +1,6 @@
+@import '../../styles/variables.scss';
+
+.page-content {
+    min-height: calc(100vh - #{$header_height + $footer_height});
+    background: blue;
+}

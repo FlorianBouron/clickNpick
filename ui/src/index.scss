@@ -1,3 +1,5 @@
+@import '/styles/all.scss';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  * {
+    font-family: serif;
+  }
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page-wrapper {
+  .MB-1 {
+    margin-bottom: 10px;
+  }
+  .MB-2 {
+    margin-bottom: 20px;
+  }
+  .MB-3 {
+    margin-bottom: 30px;
+  }
 }
+
+
+
+
