@@ -1,0 +1,54 @@
+@import "../../styles/all";
+
+.product-list-page-card {
+  width: 48%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  &.MuiPaper-root {
+    background: $little_background;
+  }
+
+
+
+  .product-list-page-card__image {
+    width: auto;
+    height: 150px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .product-list-page-card__description {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    color: $white;
+  }
+
+  .product-list-page-card__price {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    color: $white;
+  }
+
+  .product-list-page-card__footer {
+    display: flex;
+    padding: 15px;
+    color: $white;
+    button {
+      background-color: $CTA;
+      color: $white;
+      margin-left: 20px;
+    }
+    .product-list-page-card__quantity {
+      background-color: $white;
+      border-radius: 5px;
+      padding: 0 5px;
+      label {
+        left: 5px;
+      }
+    }
+  }
+}
