@@ -5,4 +5,27 @@
   background: $header;
   text-align: center;
   height: $header_height;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  .header__logo {
+    height: 80%;
+  }
+
+  .header__user {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    top: 0;
+    right: 0;
+    color: $white;
+    svg {
+      font-size: 50px;
+    }
+  }
 }

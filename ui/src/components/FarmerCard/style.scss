@@ -1,0 +1,46 @@
+@import "../../styles/variables.scss";
+
+$first_column_width: (100%/3);
+$second_column_width: (100%/3) * 2;
+
+.farmer-card {
+  margin-top: 10px;
+  display: flex;
+  background: lightblue;
+  flex-wrap: wrap;
+  .farmer-card__column1 {
+    background-color: lightcoral;
+    width: $first_column_width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .farmer-card__column2 {
+    width: $second_column_width;
+    background-color: lightcyan;
+  }
+  .farmer-card__images {
+    display: flex;
+    flex-wrap: wrap;
+    .farmer-card__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: $first_column_width;
+    }
+  }
+  .farmer-card__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .farmer-card__footer--map-button {
+      width: $first_column_width;
+      svg {
+        font-size: 40px;
+      }
+    }
+    .farmer-card__footer--shop-button {
+    }
+  }
+}

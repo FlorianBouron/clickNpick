@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.hero-banner {
+    background: green;
+    text-align: center;
+    display: block;
+    text-align: left;
+    white-space: pre;
+    .MuiTypography-root {
+        font-size: 40px;
+    }
+}
