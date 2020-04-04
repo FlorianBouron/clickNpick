@@ -115,25 +115,6 @@ export default function ProductPage() {
                     </MenuItem>
                   ))}
                 </Select>
-                {/* <Button
-                  variant="contained"
-                  onClick={() => {
-                    if (numberOfProduct > 0) {
-                      setNumberOfProduct(numberOfProduct - 1);
-                    }
-                  }}
-                >
-                  -
-                </Button>
-                <span className="product-page__quantity">
-                  {numberOfProduct}
-                </span>
-                <Button
-                  variant="contained"
-                  onClick={() => setNumberOfProduct(numberOfProduct + 1)}
-                >
-                  +
-                </Button> */}
               </div>
 
               <Button
