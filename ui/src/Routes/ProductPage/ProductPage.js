@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 
 // components
 import Card from '@material-ui/core/Card';
@@ -10,12 +10,17 @@ import Button from '@material-ui/core/Button';
 // constants
 import { API_URL, PRODUCT_ENDPOINT } from '../../constants/apiConstants';
 
+// context
+import CartContext from '../../contexts/CartContext';
+
 // styles
 import './style.scss';
 
 export default function ProductPage() {
   const [productData, setProductData] = useState(null);
   const [numberOfProduct, setNumberOfProduct] = useState(0);
+
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     window
@@ -28,6 +33,11 @@ export default function ProductPage() {
         console.log(err);
       });
   }, []);
+
+  const handleAddProductToCart = () => {
+    productData.quantity = numberOfProduct;
+    addToCart(productData);
+  };
 
   return (
     <div>
@@ -75,7 +85,13 @@ export default function ProductPage() {
               >
                 +
               </Button>
-              <Button variant="contained">Add to basket</Button>
+              <Button
+                variant="contained"
+                onClick={() => handleAddProductToCart()}
+              >
+                Add to basket
+
+              </Button>
             </div>
             <Typography variant="h6" component="h3">
               Description:
