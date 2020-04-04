@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 // components
 import FarmerCard from '../../components/FarmerCard';
+
+// constants
 import { API_URL, FARMERS_ENDPOINT } from '../../constants/apiConstants';
 
 export default function ProductListPage() {
@@ -23,12 +25,7 @@ export default function ProductListPage() {
     <div>
       {productsList.map(
         ({
-          id,
-          name,
-          description,
-          coordinates,
-          picture,
-          products,
+          id, name, description, coordinates, picture, products,
         }) => (
           <FarmerCard
             key={id}
