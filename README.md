@@ -8,6 +8,9 @@ Another repository will be created right after the Hackathon to continue this pr
 ## Description:
 Clic & Farm is a new mobile app allowing you to select vegetables and fruits directly from your local farmer with a pick & collect system thanks to automatized lockers.
 
+:warning: Note: We made a webpage for the frontend since it was faster to made than two native mobile app or using hybrid solutions like React Native or Flutter.
+We decided to use Strapi in order to have a quick backend and admin panel.
+
 ## Architecture:
 #### Backend
 This project is using [strapi](https://strapi.io/documentation/) for the backend
