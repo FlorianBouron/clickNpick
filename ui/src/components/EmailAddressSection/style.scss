@@ -1,0 +1,15 @@
+@import "../../styles/all.scss";
+
+.email-address-section {
+  background-color: $CTA3;
+  text-align: left;
+  .email-address-section__input {
+    background-color: $white;
+  }
+
+  .email-address-section__button {
+    background-color: $CTA;
+    color: $white;
+    font-weight: bold;
+  }
+}
