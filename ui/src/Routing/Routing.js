@@ -10,12 +10,12 @@ import ProductListPage from '../Routes/ProductListPage';
 import ProductPage from '../Routes/ProductPage';
 
 // components
-import CartContext from '../contexts/CartContext/CartContext';
+import { CartContextProvider } from '../contexts/CartContext/CartContext';
 
 function Router() {
   return (
-    <CartContext>
-      <BrowserRouter>
+    <BrowserRouter>
+      <CartContextProvider>
         <Switch>
           <Route exact path={ROOT}>
             <LandingPage />
@@ -27,8 +27,8 @@ function Router() {
             <ProductPage />
           </Route>
         </Switch>
-      </BrowserRouter>
-    </CartContext>
+      </CartContextProvider>
+    </BrowserRouter>
   );
 }
 
