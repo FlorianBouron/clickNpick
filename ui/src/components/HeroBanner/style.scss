@@ -1,22 +1,10 @@
 @import "../../styles/all.scss";
 
 .hero-banner {
-  background: green;
-  text-align: center;
   display: block;
-  text-align: left;
-  white-space: pre;
-  background-image: url("../../assets/images/heroImage.png");
-  background-size: 60%;
+  background-image: url("../../assets/images/heroBanner.png");
+  background-size: 100%;
   background-repeat: no-repeat;
   background-color: white;
-  background-position-x: 120%;
-  background-position-y: 108%;
-  .MuiTypography-root {
-    font-size: 40px;
-    color: $header;
-    font-weight: bold;
-    font-family: serif;
-    width: 100%;
-  }
+  height: 230px;
 }

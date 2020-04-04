@@ -1,9 +1,10 @@
 @import '../../styles/all.scss';
 
 .footer {
-    background: green;
-    text-align: center;
+    background: $footer_green;
+    text-align: left;
     line-height: $footer_height;
     display: block;
     height:$footer_height;
+    padding: 0 $section_padding-left-right;
 }
