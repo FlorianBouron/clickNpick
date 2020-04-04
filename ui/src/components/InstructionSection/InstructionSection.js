@@ -2,8 +2,10 @@ import React from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Typography from '@material-ui/core/Typography';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 import RedeemIcon from '@material-ui/icons/Redeem';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 
 // style
 import './style.scss';
@@ -20,13 +22,18 @@ export default function InstructionSection() {
       </div>
       <ArrowForwardIosIcon fontSize="Large" />
       <div>
-        <PhoneAndroidIcon fontSize="Large" />
-        <Typography>Get notification</Typography>
+        <AssignmentTurnedInIcon fontSize="Large" />
+        <Typography>Checkout</Typography>
       </div>
       <ArrowForwardIosIcon fontSize="Large" />
       <div>
-        <RedeemIcon fontSize="Large" />
-        <Typography>Collect</Typography>
+        <CreditCardIcon fontSize="Large" />
+        <Typography>Payment</Typography>
+      </div>
+      <ArrowForwardIosIcon fontSize="Large" />
+      <div>
+        <CheckCircleIcon fontSize="Large" />
+        <Typography>Success</Typography>
       </div>
     </Section>
   );
