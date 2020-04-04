@@ -3,7 +3,8 @@ import HeroBanner from '../../components/HeroBanner';
 import AddressSearchSection from '../../components/AddressSearchSection';
 import AdvantageSection from '../../components/AdvantageSection';
 import CarouselSection from '../../components/CarouselSection';
-import FarmersSection from '../../components/FarmersSection/FarmersSection';
+import FarmersSection from '../../components/FarmersSection';
+import LandingPageInstruction from '../../components/LandingPageInstruction';
 
 
 const dataArray = [
@@ -25,6 +26,7 @@ export default function LandingPage() {
     <div>
       <HeroBanner />
       <AddressSearchSection />
+      <LandingPageInstruction />
       <AdvantageSection />
       <CarouselSection data={dataArray} title="Why is it worth it?" />
       <FarmersSection />
