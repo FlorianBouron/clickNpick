@@ -73,7 +73,7 @@ function FarmerCard({
             variant="contained"
             color="primary"
             className="farmer-card__footer--shop-button"
-            onClick={() => history.push(PRODUCT_LIST)}
+            onClick={() => history.push(`${PRODUCT_LIST}?farmer=${id}`)}
           >
             Buy from this farmer
           </Button>
