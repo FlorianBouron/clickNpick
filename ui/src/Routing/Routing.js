@@ -11,20 +11,25 @@ import LandingPage from '../Routes/LandingPage';
 import FarmersListPage from '../Routes/FarmersListPage';
 import ProductPage from '../Routes/ProductPage';
 
+// components
+import { CartContextProvider } from '../contexts/CartContext/CartContext';
+
 function Router() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path={ROOT}>
-          <LandingPage />
-        </Route>
-        <Route exact path={FARMERS_LIST}>
-          <FarmersListPage />
-        </Route>
-        <Route exact path={PRODUCT}>
-          <ProductPage />
-        </Route>
-      </Switch>
+      <CartContextProvider>
+        <Switch>
+          <Route exact path={ROOT}>
+            <LandingPage />
+          </Route>
+          <Route exact path={FARMERS_LIST}>
+            <FarmersListPage />
+          </Route>
+          <Route exact path={PRODUCT}>
+            <ProductPage />
+          </Route>
+        </Switch>
+      </CartContextProvider>
     </BrowserRouter>
   );
 }
