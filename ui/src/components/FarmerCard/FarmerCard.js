@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import Button from '@material-ui/core/Button';
 import Map from '@material-ui/icons/Map';
@@ -11,16 +12,17 @@ import './style.scss';
 
 // constants
 import { API_URL } from '../../constants/apiConstants';
+import { PRODUCT } from '../../constants/routerConstants';
 
-export default function FarmerCard({
+function FarmerCard({
   id,
   name,
   description,
   coordinates,
   picture,
   products,
+  history,
 }) {
-  console.log(picture);
   return (
     <div className="farmer-card">
       <Card>
@@ -70,6 +72,7 @@ export default function FarmerCard({
             variant="contained"
             color="primary"
             className="farmer-card__footer--shop-button"
+            onClick={() => history.push(PRODUCT)}
           >
             Buy from this farmer
           </Button>
@@ -78,3 +81,5 @@ export default function FarmerCard({
     </div>
   );
 }
+
+export default withRouter(FarmerCard);
