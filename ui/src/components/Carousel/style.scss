@@ -1,0 +1,13 @@
+@import "../../styles/all.scss";
+
+.carousel {
+  color: black;
+  display: block;
+  padding:40px;
+  padding-top:20px;
+  .slick-arrow {
+      &:before {
+          color:black;
+      }
+  }
+}

@@ -18,7 +18,7 @@ export default function EmailAddressSection() {
       </Typography>
       <TextField
         id="filled-basic"
-        label="email"
+        label="address"
         variant="filled"
         fullWidth
         className="email-address-section__input MB-3"
