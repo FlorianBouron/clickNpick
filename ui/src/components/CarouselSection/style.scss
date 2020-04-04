@@ -1,17 +1,25 @@
-@import '../../styles/all.scss';
+@import "../../styles/all.scss";
 
 .carousel-section {
-    display: block;
-    .carousel-section__header {
-        color: $text;
-        font-size: 28px;
-      }
-    .carousel-section__image {
-        height: auto;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .carousel-section__slide {
-        width: 100%;
-    }
+  display: block;
+  .carousel-section__header {
+    color: $text;
+    font-size: 28px;
+  }
+  .carousel-section__image {
+    height: auto;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .carousel-section__image-wrapper {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-section__slide {
+    width: 100%;
+  }
 }
