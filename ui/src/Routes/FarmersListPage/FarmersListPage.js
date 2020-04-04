@@ -41,36 +41,15 @@ export default function FarmersListPage() {
         ({
           id, name, description, coordinates, picture, products,
         }) => (
-          <>
-            <FarmerCard
-              key={id}
-              id={id}
-              name={name}
-              description={description}
-              coordinates={coordinates}
-              picture={picture}
-              products={products}
-            />
-            <FarmerCard
-              key={id}
-              id={id}
-              name={name}
-              description={description}
-              coordinates={coordinates}
-              picture={picture}
-              products={products}
-            />
-            <FarmerCard
-              key={id}
-              id={id}
-              name={name}
-              description={description}
-              coordinates={coordinates}
-              picture={picture}
-              products={products}
-            />
-          </>
-
+          <FarmerCard
+            key={id}
+            id={id}
+            name={name}
+            description={description}
+            coordinates={coordinates}
+            picture={picture}
+            products={products}
+          />
         ),
       )}
     </Section>

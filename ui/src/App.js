@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { BrowserRouter } from 'react-router-dom';
 // styles
 import './App.scss';
 
@@ -14,13 +14,15 @@ import PageContent from './components/PageContent';
 function App() {
   return (
     <div className="App">
-      <PageWrapper>
-        <Header />
-        <PageContent>
-          <Routing />
-        </PageContent>
-        <Footer />
-      </PageWrapper>
+      <BrowserRouter>
+        <PageWrapper>
+          <Header />
+          <PageContent>
+            <Routing />
+          </PageContent>
+          <Footer />
+        </PageWrapper>
+      </BrowserRouter>
     </div>
   );
 }

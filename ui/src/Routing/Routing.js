@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 // constants
 import {
@@ -16,21 +16,19 @@ import { CartContextProvider } from '../contexts/CartContext/CartContext';
 
 function Router() {
   return (
-    <BrowserRouter>
-      <CartContextProvider>
-        <Switch>
-          <Route exact path={ROOT}>
-            <LandingPage />
-          </Route>
-          <Route exact path={FARMERS_LIST}>
-            <FarmersListPage />
-          </Route>
-          <Route exact path={PRODUCT}>
-            <ProductPage />
-          </Route>
-        </Switch>
-      </CartContextProvider>
-    </BrowserRouter>
+    <CartContextProvider>
+      <Switch>
+        <Route exact path={ROOT}>
+          <LandingPage />
+        </Route>
+        <Route exact path={FARMERS_LIST}>
+          <FarmersListPage />
+        </Route>
+        <Route exact path={PRODUCT}>
+          <ProductPage />
+        </Route>
+      </Switch>
+    </CartContextProvider>
   );
 }
 

@@ -11,8 +11,12 @@
   padding-right: 15px;
   padding-left: 15px;
 
-  .header__logo {
+  .header__link {
     height: 80%;
+    cursor: pointer;
+  }
+  .header__logo {
+    height: 100%;
   }
 
   .header__user {
