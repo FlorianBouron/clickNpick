@@ -9,18 +9,18 @@ export const CartContextProvider = ({ children }) => {
   const [productsList, setProductsList] = useState([]);
 
   const addToCart = (product) => {
-    console.log(product);
-    // setProductsList((currentProductList) => {
-    //   const prodIndex = currentProductList.findIndex(
-    //     (p) => p.id === productId,
-    //   );
-    //   const newStatus = !currentProductList[prodIndex].isCartItem;
-    //   const updatedProduct = [...productsList];
-    //   updatedProduct[prodIndex] = {
-    //     ...currentProductList[prodIndex], isCartItem: newStatus,
-    //   };
-    //   return updatedProduct;
-    // });
+    const hasProductInList = !!productsList.find((_product) => product.id === _product.id);
+
+    if (hasProductInList) {
+      setProductsList(productsList.map((_product) => {
+        if (product.id === _product.id) {
+          return product;
+        }
+        return _product;
+      }));
+    } else {
+      setProductsList([...productsList, product]);
+    }
   };
 
   return (

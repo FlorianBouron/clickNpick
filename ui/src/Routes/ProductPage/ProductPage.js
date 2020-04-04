@@ -20,8 +20,7 @@ export default function ProductPage() {
   const [productData, setProductData] = useState(null);
   const [numberOfProduct, setNumberOfProduct] = useState(0);
 
-  const addToCart = useContext(CartContext);
-  console.log({ addToCart });
+  const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
     window
