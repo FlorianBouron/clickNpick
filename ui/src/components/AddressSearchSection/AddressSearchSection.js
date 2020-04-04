@@ -15,7 +15,7 @@ import {
   PLACES_CLIENT_ID,
   PLACES_AUTOCOMPLETE_KEY,
 } from '../../constants/apiConstants';
-import { PRODUCT_LIST } from '../../constants/routerConstants';
+import { FARMERS_LIST } from '../../constants/routerConstants';
 
 const places = require('places.js');
 
@@ -44,7 +44,7 @@ export default withRouter(({ history }) => {
   function handleClick() {
     if (latLng) {
       setInputError(false);
-      history.push(PRODUCT_LIST);
+      history.push(FARMERS_LIST);
     } else {
       setInputError(true);
     }

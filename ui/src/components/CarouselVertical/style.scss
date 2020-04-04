@@ -1,0 +1,13 @@
+@import "../../styles/all.scss";
+
+.carousel-vertical {
+  color: black;
+  display: block;
+  max-width: 100%;
+  padding-top:20px;
+  .slick-arrow {
+      &:before {
+          color:black;
+      }
+  }
+}

@@ -1,5 +1,4 @@
-@import "../../styles/variables.scss";
-@import "../../styles/colours.scss";
+@import "../../styles/all.scss";
 
 .header {
   background: $header;
@@ -9,7 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  padding-right: 15px;
+  padding-left: 15px;
 
   .header__logo {
     height: 80%;
