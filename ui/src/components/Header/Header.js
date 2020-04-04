@@ -11,11 +11,14 @@ import './style.scss';
 import logo from '../../assets/images/logo.png';
 
 // constants
-import { ROOT } from '../../constants/routerConstants';
+import { ROOT, CART } from '../../constants/routerConstants';
 
 export default withRouter(({ history }) => (
   <div className="header">
-    <Button className="header__user">
+    <Button
+      className="header__user"
+      onClick={() => history.push(CART)}
+    >
       <ShoppingCartIcon />
     </Button>
     <ButtonLink
