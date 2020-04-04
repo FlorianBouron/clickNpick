@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How do I run this?
+* Run `npm install` from this folder.
+* Run `npm run start` from this folder or `yarn start` if you are using `yarn`.
+* Open [http://localhost:3000](http://localhost:3000)
+
 ## Available Scripts
 
 In the project directory, you can run:
