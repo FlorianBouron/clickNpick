@@ -9,13 +9,17 @@ import { Button } from '@material-ui/core';
 import Section from '../Section';
 
 export default function CartList() {
-  const products = [1, 2];
+  const products = [1, 2, 3, 4, 5, 6];
   return (
     <Section className="cart-list">
       <div className="cart-list__row cart-list__header">
         <div className="cart-list__column cart-list__column1" />
-        <div className="cart-list__column cart-list__column2">Product</div>
-        <div className="cart-list__column cart-list__column3">Paid</div>
+        <div className="cart-list__column cart-list__column2">
+          <strong>Product</strong>
+        </div>
+        <div className="cart-list__column cart-list__column3">
+          <strong>Paid</strong>
+        </div>
         <div className="cart-list__column cart-list__column4" />
       </div>
       <div className="cart-list__products">
@@ -70,7 +74,15 @@ export default function CartList() {
         ))}
         <div className="cart-list__row cart-list__sum">
           <div className="cart-list__column cart-list__column1" />
-          <div className="cart-list__column cart-list__column2">Product</div>
+          <div className="cart-list__column cart-list__column2">
+            <Typography
+              className="cart-list-product__price"
+              variant="body1"
+              component="body1"
+            >
+              Total
+            </Typography>
+          </div>
           <div className="cart-list__column cart-list__column3">
             <Typography
               className="cart-list-product__price"
@@ -82,6 +94,10 @@ export default function CartList() {
           </div>
           <div className="cart-list__column cart-list__column4" />
         </div>
+      </div>
+      <div className="cart-list__checkout">
+        <Button className="cart-list__continue-btn">Continue shopping</Button>
+        <Button className="cart-list__checkout-btn">Go to checkout</Button>
       </div>
     </Section>
   );

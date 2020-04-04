@@ -16,11 +16,16 @@
   .cart-list-product-row {
     background-color: $white;
     border-radius: 2px;
+    margin-bottom: 10px;
   }
 
   .cart-list__header,
   .cart-list__sum {
     height: 50px;
+  }
+
+  .cart-list__sum {
+    margin-bottom: 20px;
   }
 
   .cart-list__column {
@@ -38,10 +43,10 @@
     width: 35%;
   }
   .cart-list__column3 {
-    width: 20%;
+    width: 15%;
   }
   .cart-list__column4 {
-    width: 10%;
+    width: 15%;
   }
 
   .cart-list__image {
@@ -66,7 +71,34 @@
   }
 
   .cart-list-product__price {
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  .cart-list__checkout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button {
       font-weight: bold;
-      font-size: 22px;
+    }
+  }
+
+  .cart-list__checkout-btn {
+    width: 45%;
+    background-color: $CTA;
+    * {
+      color: $white;
+    }
+  }
+
+  .cart-list__continue-btn {
+    width: 45%;
+    background-color: $little_background;
+
+    white-space: nowrap;
+    * {
+      color: $white;
+    }
   }
 }
