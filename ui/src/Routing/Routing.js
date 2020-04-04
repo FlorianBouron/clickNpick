@@ -6,7 +6,7 @@ import { ROOT, PRODUCT_LIST } from '../constants/routerConstants';
 
 // pages
 import LandingPage from '../Routes/LandingPage';
-import ProductPage from '../Routes/ProductListPage';
+import ProductListPage from '../Routes/ProductListPage';
 
 function Router() {
   return (
@@ -16,7 +16,7 @@ function Router() {
           <LandingPage />
         </Route>
         <Route exact path={PRODUCT_LIST}>
-          <ProductPage />
+          <ProductListPage />
         </Route>
       </Switch>
     </BrowserRouter>
