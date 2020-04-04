@@ -50,17 +50,18 @@ function FarmerCard({
             </Typography>
             <div className="farmer-card__images">
               <CarouselVertical>
-                {[1, 2, 3, 4, 5].map(() => (
-                  <div>
+                {products.map((product) => (
+                  <div key={`product-${product.id}`}>
                     <div className="farmer-card__image-wrapper">
                       <Avatar
-                        src="https://media.istockphoto.com/photos/this-farm-is-my-pride-and-joy-picture-id904559680?k=6&m=904559680&s=612x612&w=0&h=qJ24psKCPjKzwPzDqGdeG7beRnqe8fIH3R-3-_yX8gI="
-                        alt="pig"
+                        src={`${API_URL}${product.photo.url}`}
+                        alt={product.photo.name}
                         className="farmer-card__image-avatar"
                         variant="square"
                       />
                     </div>
                   </div>
+
                 ))}
               </CarouselVertical>
             </div>
