@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 // components
-import TextField from '@material-ui/core/TextField';
-import Section from '../../components/Section';
-import ProductListPageCard from '../ProductListPageCard';
+import TextField from "@material-ui/core/TextField";
+import Section from "../../components/Section";
+import ProductListPageCard from "../ProductListPageCard";
 
 // constants
-import { API_URL, PRODUCT_ENDPOINT } from '../../constants/apiConstants';
+import { API_URL, PRODUCT_ENDPOINT } from "../../constants/apiConstants";
 
 // styles
-import './style.scss';
+import "./style.scss";
 
 function ProductListPage() {
   const urlParams = new URLSearchParams(window.location.search);
-  const farmerId = urlParams.get('farmer');
+  const farmerId = urlParams.get("farmer");
 
   const [productList, setProductList] = useState([]);
-
 
   useEffect(() => {
     window
@@ -28,8 +27,8 @@ function ProductListPage() {
       .catch((err) => {
         console.log(err);
       });
+    // eslint-disable-next-line
   }, []);
-
 
   return (
     <Section className="product-list-page">

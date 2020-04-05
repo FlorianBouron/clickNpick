@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
-import RedeemIcon from '@material-ui/icons/Redeem';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 
 // style

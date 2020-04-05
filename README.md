@@ -34,9 +34,9 @@ In order to have them running open two terminals, one for backend and one for fr
 
 #### Backend
 
-Go tho the backend folder and run `npm install`.
+Go tho the `backend` folder and run `npm install` or `yarn`.
 
-Then run `npm run build`.
+Then in the same `backend` folder run `npm run build`.
 
 You can now start the backend by typing `npm run start`.
 
@@ -47,9 +47,9 @@ The credentials are:
 * Password: `p@ssword`
 
 #### Frontend
-
-- Run `npm install`
-- Run `npm run start`
+- go to `ui` folder
+- Run `npm install` or `yarn`
+- Run `npm run start` or `yarn start`
 - Open [http://localhost:3000/](http://localhost:3000/)
 
 
