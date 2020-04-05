@@ -1,9 +1,0 @@
-export const ROOT = '/';
-export const CART = '/cart';
-export const IDENTIFICATION = '/identification';
-export const LOGIN = '/login';
-export const ORDERS = '/orders';
-export const PRODUCT_LIST = '/product-list';
-export const FARMERS_LIST = '/farmers-list';
-export const PRODUCT_PAGE = '/product';
-export const VALIDATION = '/validation';
