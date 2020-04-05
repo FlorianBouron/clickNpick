@@ -33,7 +33,7 @@ function ProductListPageCard({ history, product }) {
       </Typography>
       <div className="product-list-page-card__footer">
         <TextField label="Quantity" className="product-list-page-card__quantity" />
-        <Button onClick={() => history.push(PRODUCT_PAGE)}>Add</Button>
+        <Button onClick={() => history.push(`${PRODUCT_PAGE}/${product.id}`)}>Add</Button>
       </div>
     </Card>
   );

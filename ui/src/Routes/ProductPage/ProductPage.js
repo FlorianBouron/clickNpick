@@ -1,4 +1,7 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, {
+  useEffect, useState, useContext, useMemo,
+} from 'react';
+import { withRouter } from 'react-router-dom';
 
 // components
 import Typography from '@material-ui/core/Typography';
@@ -8,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import Section from '../../components/Section';
 
 // constants
-import { API_URL, PRODUCT_ENDPOINT } from '../../constants/apiConstants';
+import { API_URL, PRODUCT_ENDPOINT, FARMERS_ENDPOINT } from '../../constants/apiConstants';
 
 // context
 import CartContext from '../../contexts/CartContext';
@@ -18,6 +21,8 @@ import './style.scss';
 
 // components
 import CarouselSection from '../../components/CarouselSection';
+import { QUANTITY } from '../../constants/cartConstants';
+import { FARMERS_LIST, PRODUCT_LIST } from '../../constants/routerConstants';
 
 // mock data
 const dataArray = [
@@ -39,15 +44,27 @@ const dataArray = [
 
 const selectOptions = [1, 2, 3, 4, 5, 10];
 
-export default function ProductPage() {
-  const [productData, setProductData] = useState({});
-  const [numberOfProduct, setNumberOfProduct] = useState(0);
+function ProductPage({
+  match: {
+    params: { id },
+  },
+  history,
+}) {
+  const { addToCart, products } = useContext(CartContext);
+  const defaultNumberOfProduct = useMemo(() => {
+    if (products[id]) {
+      return products[id][QUANTITY];
+    }
+    return 0;
+  }, []);
 
-  const { addToCart } = useContext(CartContext);
+  const [productData, setProductData] = useState({});
+  const [numberOfProduct, setNumberOfProduct] = useState(defaultNumberOfProduct);
+
 
   useEffect(() => {
     window
-      .fetch(`${API_URL}${PRODUCT_ENDPOINT}/1`)
+      .fetch(`${API_URL}${PRODUCT_ENDPOINT}/${id}`)
       .then((response) => response.json())
       .then((res) => {
         setProductData(res);
@@ -58,12 +75,13 @@ export default function ProductPage() {
   }, []);
 
   const handleAddProductToCart = () => {
-    setNumberOfProduct(numberOfProduct);
-    addToCart(productData);
+    if (numberOfProduct) {
+      addToCart({ ...productData, [QUANTITY]: numberOfProduct });
+    }
   };
 
   const {
-    name, price, photo, description, unit,
+    name, price, photo, description, unit, farm,
   } = productData;
 
   return (
@@ -125,6 +143,13 @@ export default function ProductPage() {
                 Add to basket
               </Button>
             </div>
+            <Button
+              className="product-page__add-go-back"
+              variant="contained"
+              onClick={() => history.push(`${PRODUCT_LIST}?farmer=${farm.id}`)}
+            >
+              Go back to shopping
+            </Button>
 
             <Typography
               variant="h6"
@@ -151,3 +176,5 @@ export default function ProductPage() {
     </div>
   );
 }
+
+export default withRouter(ProductPage);

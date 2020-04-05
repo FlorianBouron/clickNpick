@@ -29,7 +29,7 @@ function Router() {
         <Route exact path={PRODUCT_LIST}>
           <ProductListPage />
         </Route>
-        <Route exact path={PRODUCT_PAGE}>
+        <Route exact path={`${PRODUCT_PAGE}/:id`}>
           <ProductPage />
         </Route>
         <Route exact path={CART}>
