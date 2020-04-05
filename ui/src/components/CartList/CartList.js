@@ -15,7 +15,7 @@ import { API_URL } from '../../constants/apiConstants';
 import { FARMERS_LIST } from '../../constants/routerConstants';
 
 function CartList({ history }) {
-  const { products, removeFromCart } = useContext(CartContext);
+  const { products, removeFromCart, clearCart } = useContext(CartContext);
   const totalPrice = Number(
     Object.values(products).reduce(
       (acc, { quantity, price }) => acc + quantity * price,
@@ -130,7 +130,15 @@ function CartList({ history }) {
           Continue shopping
         </Button>
         {Number(totalPrice) ? (
-          <Button className="cart-list__checkout-btn">Go to checkout</Button>
+          <Button
+            onClick={() => {
+              alert('You order has been processed');
+              clearCart();
+            }}
+            className="cart-list__checkout-btn"
+          >
+            Order products
+          </Button>
         ) : null}
       </div>
     </Section>

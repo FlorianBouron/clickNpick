@@ -7,6 +7,7 @@ const CartContext = React.createContext({
   products: [],
   addToCart: () => {},
   removeFromCart: () => {},
+  clearCart: () => {},
 });
 
 export const CartContextProvider = ({ children }) => {
@@ -18,7 +19,6 @@ export const CartContextProvider = ({ children }) => {
     return {};
   }, []);
 
-
   const [productsList, setProductsList] = useState(defaultState);
 
   const addToCart = (product) => {
@@ -26,7 +26,7 @@ export const CartContextProvider = ({ children }) => {
     if (productsList) {
       setProductsList((prevState) => ({ ...prevState, [id]: product }));
     } else {
-      setProductsList(({ [id]: product }));
+      setProductsList({ [id]: product });
     }
   };
 
@@ -39,6 +39,10 @@ export const CartContextProvider = ({ children }) => {
     }
   };
 
+  const clearCart = () => {
+    setProductsList({});
+  };
+
   useEffect(() => {
     if (productsList) {
       localStorage.setItem(CART, JSON.stringify(productsList));
@@ -46,7 +50,14 @@ export const CartContextProvider = ({ children }) => {
   }, [productsList]);
 
   return (
-    <CartContext.Provider value={{ products: productsList, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{
+        products: productsList,
+        addToCart,
+        removeFromCart,
+        clearCart,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
