@@ -42,7 +42,8 @@
       "beforeEach": true,
       "debug": true,
       "beforeAll": true,
-      "afterEach":true
+      "afterEach":true,
+      "localStorage":true
     },
     "parser": "babel-eslint"
   }

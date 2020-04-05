@@ -72,4 +72,11 @@
   .product-page__description-text {
       text-align: left;
   }
+
+  .product-page__add-go-back {
+    background-color: $header;
+    color: $white;
+    margin-top: 20px;
+    width: 100%;
+  }
 }

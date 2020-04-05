@@ -1,30 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+
+// constants
+import { CART } from '../../constants/routerConstants';
 
 const CartContext = React.createContext({
   products: [],
   addToCart: () => {},
+  removeFromCart: () => {},
 });
 
 export const CartContextProvider = ({ children }) => {
-  const [productsList, setProductsList] = useState([]);
+  const defaultState = useMemo(() => {
+    const cartState = localStorage.getItem(CART);
+    if (cartState) {
+      return JSON.parse(cartState);
+    }
+    return {};
+  }, []);
+
+
+  const [productsList, setProductsList] = useState(defaultState);
 
   const addToCart = (product) => {
-    const hasProductInList = !!productsList.find((_product) => product.id === _product.id);
-
-    if (hasProductInList) {
-      setProductsList(productsList.map((_product) => {
-        if (product.id === _product.id) {
-          return product;
-        }
-        return _product;
-      }));
+    const { id } = product;
+    if (productsList) {
+      setProductsList((prevState) => ({ ...prevState, [id]: product }));
     } else {
-      setProductsList([...productsList, product]);
+      setProductsList(({ [id]: product }));
     }
   };
 
+  const removeFromCart = (id) => {
+    if (productsList[id]) {
+      const productsListCopy = { ...productsList };
+      delete productsListCopy[id];
+
+      setProductsList(productsListCopy);
+    }
+  };
+
+  useEffect(() => {
+    if (productsList) {
+      localStorage.setItem(CART, JSON.stringify(productsList));
+    }
+  }, [productsList]);
+
   return (
-    <CartContext.Provider value={{ products: productsList, addToCart }}>
+    <CartContext.Provider value={{ products: productsList, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
