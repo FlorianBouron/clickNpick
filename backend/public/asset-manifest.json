@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.57311098.chunk.css",
+    "main.js": "/static/js/main.0be8cce6.chunk.js",
+    "main.js.map": "/static/js/main.0be8cce6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d9dd77e8.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d9dd77e8.js.map",
+    "static/js/2.4d89eb9e.chunk.js": "/static/js/2.4d89eb9e.chunk.js",
+    "static/js/2.4d89eb9e.chunk.js.map": "/static/js/2.4d89eb9e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c51058bcb561b7576f29f9bf96f244cf.js": "/precache-manifest.c51058bcb561b7576f29f9bf96f244cf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.57311098.chunk.css.map": "/static/css/main.57311098.chunk.css.map",
+    "static/js/2.4d89eb9e.chunk.js.LICENSE.txt": "/static/js/2.4d89eb9e.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/Lucida Sans Regular.4a8049c6.ttf",
+    "static/media/farmer.png": "/static/media/farmer.2c250a7b.png",
+    "static/media/female_farmer.png": "/static/media/female_farmer.1d911f05.png",
+    "static/media/style.scss": "/static/media/heroBanner.574697eb.png",
+    "static/media/logo.png": "/static/media/logo.790a35f5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9dd77e8.js",
+    "static/js/2.4d89eb9e.chunk.js",
+    "static/css/main.57311098.chunk.css",
+    "static/js/main.0be8cce6.chunk.js"
+  ]
+}
